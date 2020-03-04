@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+#shorten-container {
+  width: fit-content;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+
+#shorten-form {
+  display: flex;
+}
+
+.shorten-url-field {
+  width: unset;
+  margin-right: 10px;
+}
+
+#generated-url {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+#generated-url p {
+  margin: 5px 0;
+}
