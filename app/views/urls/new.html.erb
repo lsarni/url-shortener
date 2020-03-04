@@ -1,0 +1,10 @@
+<div>
+  <div>
+    <p>Create a short link:</p>
+    <%= form_for :url, url: url_path, remote: true do |f| %>
+      <%= f.text_field :url %>
+      <%= f.submit "Shorten" %>
+    <% end %>
+    <div id="generated-url"></div>
+  </div>
+</div>

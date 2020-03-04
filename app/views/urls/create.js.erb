@@ -1,0 +1,6 @@
+var message = `
+  <p>Old url: <a href="<%= @url.url %>" target="_blank" rel="noopener noreferrer"><%= @url.url %><a/></p>
+  <p>New url: <a href="<%= @url.short_url %>" target="_blank" rel="noopener noreferrer"><%= @url.short_url %><a/></p>
+`
+document.getElementById("url_url").value = "";
+document.getElementById("generated-url").innerHTML = message;
