@@ -1,5 +1,16 @@
-// Clear out input field
-document.getElementById('url_url').value = "";
-// Show old and new url
-var container = document.getElementById('shorten-container');
-container.insertAdjacentHTML('beforeend', "<%= j render(partial: 'urls/shorten', locals: { url: @url }) %>");
+// Remove any previous appended html
+document.querySelectorAll(".notice").forEach(el => el.remove());
+document.querySelectorAll("#generated-url").forEach(el => el.remove());
+
+<% if @url.valid? %>
+  // Clear out input field
+  document.getElementById('url_url').value = "";
+  // Show old and new url
+  var container = document.getElementById('shorten-container');
+  container.insertAdjacentHTML('beforeend', "<%= j render(partial: 'urls/shorten', locals: { url: @url }) %>");
+<% else %>
+  var form = document.getElementById('shorten-form');
+  <% @url.errors.full_messages.each do |message| %>
+    form.insertAdjacentHTML('afterend', '<div class="notice"><%= escape_javascript(message)%></div>');
+  <% end %>
+<% end %>

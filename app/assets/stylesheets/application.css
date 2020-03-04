@@ -42,3 +42,8 @@
 #generated-url p {
   margin: 5px 0;
 }
+
+.notice {
+  margin: 5px 0;
+  color: red;
+}
