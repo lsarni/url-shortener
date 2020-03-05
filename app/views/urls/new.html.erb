@@ -1,6 +1,6 @@
 <div class='container-fluid'>
   <div id='shorten-container'>
-    <h4>Create a short link:</h4>
+    <h4>Create a short url:</h4>
     <%= form_for :url, url: url_path, remote: true, html: { id: 'shorten-form' } do |f| %>
       <%= f.text_field :url, class: 'form-control shorten-url-field' %>
       <%= f.submit 'Shorten', class:'btn btn-primary' %>
