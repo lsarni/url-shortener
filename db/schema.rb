@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2020_03_03_184900) do
 
-  create_table "urls", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "urls", force: :cascade do |t|
     t.text "url"
     t.string "slug"
     t.datetime "created_at", precision: 6, null: false
