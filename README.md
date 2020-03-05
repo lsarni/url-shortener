@@ -1,24 +1,51 @@
-# README
+# URL Shortener
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Small Rails project that given a url it returns a shorter version that redirects to the original one.
 
-Things you may want to cover:
+Deployed at [https://shrt-gf.herokuapp.com/](https://shrt-gf.herokuapp.com/)
 
-* Ruby version
+## Prerequisites
 
-* System dependencies
+- Ruby: 2.7.0
+- PostgreSQL
 
-* Configuration
+## Install
 
-* Database creation
+### Clone the repository
 
-* Database initialization
+```shell
+git clone git@github.com:lsarni/url-shortener.git
+cd shortener
+```
 
-* How to run the test suite
+### Install dependencies
 
-* Services (job queues, cache servers, search engines, etc.)
+Using [Bundler](https://github.com/bundler/bundler):
 
-* Deployment instructions
+```shell
+bundle install
+```
 
-* ...
+### Set environment variables
+
+Create a copy of `.env.exampl` and rename it to `.env`. 
+
+Fill out any missing fields with the correct information.
+
+### Initialize the database
+
+```shell
+rails db:create db:migrate
+```
+
+## Serve
+
+```shell
+rails s
+```
+
+## Test
+
+```shell
+rspec -fd
+```
